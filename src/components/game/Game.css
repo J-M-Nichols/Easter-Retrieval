@@ -1,0 +1,23 @@
+#game{
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+
+.game-row{
+    height: 16px;
+    width: 160px;
+    display: flex;
+}
+
+.game-col{
+    height: 16px;
+    width: 16px;
+    background-image: url(../../images/GrassTile.png);
+}
+
+.game-element{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+}

@@ -1,9 +1,9 @@
 import React from 'react'
-import Sprite from './sprite/Sprite'
+import Game from './game/Game'
 
 const Home = ()=>{
     return <section>
-        <Sprite />
+        <Game />
     </section>
 }
 

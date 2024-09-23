@@ -1,0 +1,8 @@
+@keyframes play {
+    from { background-position-x: 0px; }
+    to { background-position-x: 56px; }
+}
+
+.animated-sprite {
+    animation: play 1s steps(4) infinite;
+}
