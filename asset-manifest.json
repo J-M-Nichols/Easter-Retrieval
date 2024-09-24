@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Easter-Retrieval/static/css/main.09071836.css",
-    "main.js": "/Easter-Retrieval/static/js/main.5283533b.js",
+    "main.js": "/Easter-Retrieval/static/js/main.e6733bf4.js",
     "index.html": "/Easter-Retrieval/index.html",
     "main.09071836.css.map": "/Easter-Retrieval/static/css/main.09071836.css.map",
-    "main.5283533b.js.map": "/Easter-Retrieval/static/js/main.5283533b.js.map"
+    "main.e6733bf4.js.map": "/Easter-Retrieval/static/js/main.e6733bf4.js.map"
   },
   "entrypoints": [
     "static/css/main.09071836.css",
-    "static/js/main.5283533b.js"
+    "static/js/main.e6733bf4.js"
   ]
 }
