@@ -10,7 +10,7 @@ const GameOver = _ => {
                 }}
             >Game Over</h2>
             <img
-                className="w-25 h-25 img-fluid m-auto"
+                className="w-15 h-15 img-fluid m-auto"
                 src={`${process.env.PUBLIC_URL}/ChesterCarrotsLogo.png`}
                 alt="Chester Carrots"
                 style={{

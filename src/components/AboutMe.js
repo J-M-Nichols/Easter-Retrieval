@@ -97,7 +97,7 @@ const AboutMe = () => {
                 <h2 className="m-auto text-secondary">Acknowledgements</h2>
                 <Link
                     type="button"
-                    className="m-auto btn btn-outline-info"
+                    className="m-auto btn btn-outline-secondary"
                     target='_blank'
                     to='https://cupnooble.itch.io/sprout-lands-asset-pack'
                 >Images from Sprout Lands by Cup Noodles</Link>
