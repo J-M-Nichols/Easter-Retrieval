@@ -9,10 +9,13 @@ const Game = () => {
     const {width, height} = useSelector(state=>state.dimensions)
 
     return (
-        <section>  
+        <section
+            className='d-flex justify-content-center flex-wrap flex-column gap-3'
+        >  
             <InfoDisplay />
             <div
                 id="game"
+                className='m-auto'
             >
                 {[...Array(height)].map((_, index)=>{
                     return (
