@@ -30,8 +30,13 @@ const Home = ()=>{
                 <div
                     className='container-fluid'
                 >
-                    <div className="row">
-                        <div className="col-4">
+                    <div className="row flex-wrap">
+                        <div 
+                            className="m-auto col-4"
+                            style={{
+                                minWidth:'235px'
+                            }}
+                        >
                             <div className="list-group" id="list-tab" role="tablist">
                             <a 
                                 className="list-group-item list-group-item-action active" 
@@ -59,7 +64,12 @@ const Home = ()=>{
                             >How to lose</a>
                             </div>
                         </div>
-                        <div className="col-8 text-secondary">
+                        <div 
+                            className="m-auto col-8 text-secondary"
+                            style={{
+                                minWidth:'235px'
+                            }}
+                        >
                             <div className="tab-content" id="nav-tabContent">
                             <div 
                                 className="tab-pane fade show active" 
