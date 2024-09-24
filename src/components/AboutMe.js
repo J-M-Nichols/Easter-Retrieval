@@ -39,7 +39,7 @@ const AboutMe = () => {
                         }
                     >
                         <a 
-                            className="btn btn-outline-info flex-fill"
+                            className="btn btn-outline-secondary flex-fill"
                             href="mailto:JNichols@NichathanGaming.com?subject=Contact%20from%20Road%20To%20The%20West%20Game&body=Hello%20NichathanGaming,"
                             aria-label="Email"
                         >Email Me</a>
@@ -51,7 +51,7 @@ const AboutMe = () => {
                         }
                     >
                         <a 
-                            className="btn btn-outline-info flex-fill"
+                            className="btn btn-outline-secondary flex-fill"
                             href="https://www.linkedin.com/in/johnathan-nichols-571b87272"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -65,7 +65,7 @@ const AboutMe = () => {
                         }
                     >
                         <a 
-                            className="btn btn-outline-info flex-fill"
+                            className="btn btn-outline-secondary flex-fill"
                             href="https://github.com/J-M-Nichols"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -79,7 +79,7 @@ const AboutMe = () => {
                         }
                     >
                         <a 
-                            className="btn btn-outline-info flex-fill"
+                            className="btn btn-outline-secondary flex-fill"
                             href="https://www.nichathangaming.com"
                             target="_blank"
                             rel="noopener noreferrer"
