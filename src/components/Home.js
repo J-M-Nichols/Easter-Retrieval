@@ -8,7 +8,7 @@ const Home = ()=>{
                 className='text-center'
             >Welcome to <b>Easter Retrieval</b></h1>
             <div
-                className='border border-info rounded bg-light bg-gradient p-3'
+                className='border border-info text-secondary rounded bg-light bg-gradient p-3'
             >
                 <p
                     className='text-center'
@@ -59,7 +59,7 @@ const Home = ()=>{
                             >How to lose</a>
                             </div>
                         </div>
-                        <div className="col-8">
+                        <div className="col-8 text-secondary">
                             <div className="tab-content" id="nav-tabContent">
                             <div 
                                 className="tab-pane fade show active" 

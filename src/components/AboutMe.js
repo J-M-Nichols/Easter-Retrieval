@@ -16,7 +16,7 @@ const AboutMe = () => {
                     className="ps-3"
                 >Bio</h2>
                 <div 
-                    className="border p-3 border-info rounded bg-light bg-gradient"
+                    className="border text-secondary p-3 border-info rounded bg-light bg-gradient"
                 >
                     <p className="m-3">
                         I am John, the developer of <b>Easter Retrieval</b>. I have been developing small apps and games in Unity with C# since 2012 but in the past 3 years I have been creating MERN and FERN websites. This is my second website using Redux and Bootstrap and I hope that you enjoy it. 
@@ -94,14 +94,14 @@ const AboutMe = () => {
                     width:'fit-content'
                 }}
             >
-                <h2 className="m-auto">Acknowledgements</h2>
+                <h2 className="m-auto text-secondary">Acknowledgements</h2>
                 <Link
                     type="button"
                     className="m-auto btn btn-outline-info"
                     target='_blank'
                     to='https://cupnooble.itch.io/sprout-lands-asset-pack'
                 >Images from Sprout Lands by Cup Noodles</Link>
-                <p className="m-auto">(with small alterations made)</p>
+                <p className="m-auto text-secondary">(with small alterations made)</p>
             </section>
         </section>
     )

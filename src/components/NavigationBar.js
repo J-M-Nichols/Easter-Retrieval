@@ -21,7 +21,7 @@ const NavigationBar = _ => {
                     alt="Chester Carrots"
                 />
                 <span 
-                    className="ps-3"
+                    className="ps-3 text-info"
                 >Easter Retrieval</span>
             </Navbar.Brand>
             <Navbar.Toggle 

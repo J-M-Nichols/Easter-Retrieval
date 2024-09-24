@@ -8,7 +8,9 @@ import AboutMe from "./components/AboutMe";
 
 const App = () => {
   return (
-    <div >
+    <div 
+      className="text-info"
+    >
       <NavigationBar />
       <main
         className="mt-5 p-5 mb-5 pb-5"
