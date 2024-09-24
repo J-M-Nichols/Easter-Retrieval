@@ -42,6 +42,9 @@ const AboutMe = () => {
                             className="btn btn-outline-secondary flex-fill"
                             href="mailto:JNichols@NichathanGaming.com?subject=Contact%20from%20Road%20To%20The%20West%20Game&body=Hello%20NichathanGaming,"
                             aria-label="Email"
+                            style={{
+                                wordBreak:'break-all'
+                            }}
                         >Email Me</a>
                     </OverlayTrigger>
                     <OverlayTrigger 
@@ -56,6 +59,9 @@ const AboutMe = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="LinkedIn"
+                            style={{
+                                wordBreak:'break-all'
+                            }}
                         >LinkedIn</a>
                     </OverlayTrigger>
                     <OverlayTrigger 
@@ -70,6 +76,9 @@ const AboutMe = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="GitHub"
+                            style={{
+                                wordBreak:'break-all'
+                            }}
                         >GitHub</a>
                     </OverlayTrigger>
                     <OverlayTrigger 
@@ -84,6 +93,9 @@ const AboutMe = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Nichathan Gaming"
+                            style={{
+                                wordBreak:'break-all'
+                            }}
                         >NichathanGaming.com</a>
                     </OverlayTrigger>
                 </div>
