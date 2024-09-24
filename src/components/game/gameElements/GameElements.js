@@ -1,7 +1,20 @@
+import { useEffect, useState } from "react"
 import AnimatedSprite from "../../animatedSprite/AnimatedSprite"
 import GameElement from "./GameElement"
+import { useDispatch, useSelector } from "react-redux"
+import generateGameElements from "../../../helpers/generateGameElements"
+import { initializeGame } from "../../../features/gameSlice"
 
-const GameElements = ({gameElements}) => {
+const GameElements = () => {
+    const {map} = useSelector(state=>state.map)
+    const [gameElements, setGameElements] = useState([])
+    const dispatch = useDispatch()
+
+    useEffect(()=>{
+        if(map.length === 0) dispatch(initializeGame())
+        else setGameElements(generateGameElements(map))
+    },[map])
+
     return (
         <section 
             aria-label="game elements"

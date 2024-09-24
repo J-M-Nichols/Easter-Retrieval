@@ -1,9 +1,20 @@
 import React from 'react'
-import Game from './game/Game'
+import { useDispatch } from 'react-redux'
+import { initializeGame } from '../features/gameSlice'
+import { Link } from 'react-router-dom'
 
 const Home = ()=>{
+    const dispatch = useDispatch()
+
     return <section>
-        <Game />
+        <Link
+            to="/play" 
+            className="btn btn-primary" 
+            role="button"
+            onClick={()=>{
+                dispatch(initializeGame())
+            }}
+        >Play</Link>
     </section>
 }
 

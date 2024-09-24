@@ -1,6 +1,6 @@
 import React from 'react'
 import './AnimatedSprite.css'
-import spritePositions from './spritePositions'
+import spritePositions from '../../helpers/spritePositions'
 
 const AnimatedSprite = ({direction, positionX, positionY, image})=>{
 

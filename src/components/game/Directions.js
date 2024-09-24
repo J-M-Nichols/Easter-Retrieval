@@ -1,23 +1,29 @@
-const Directions = ({IncreaseX, DecreaseX, IncreaseY, DecreaseY})=>{
+import { useDispatch } from "react-redux"
+import { moveX, moveY } from '../../features/positionSlice/move'
+
+const Directions = ()=>{
+    const dispatch = useDispatch()
+
+
     return (
         <section
             aria-label="direction"
         >
             <button 
                 aria-label="Move Up"
-                onClick={IncreaseY}
+                onClick={()=>dispatch(moveY(-1))}
             >&#11165;</button>
             <button 
                 aria-label="Move Left"
-                onClick={DecreaseX}
+                onClick={()=>dispatch(moveX(-1))}
             >&#11164;</button>
             <button 
                 aria-label="Move Down"
-                onClick={DecreaseY}
+                onClick={()=>dispatch(moveY(1))}
             >&#11167;</button>
             <button 
                 aria-label="Move Right"
-                onClick={IncreaseX}
+                onClick={()=>dispatch(moveX(1))}
             >&#11166;</button>
         </section>
     )

@@ -1,9 +1,10 @@
 import CountSquareNeighbors from "./CountSquareNeighbors"
 import Shuffle from "./Shuffle"
+import spaceIndexing from '../helpers/spaceIndexing'
 
 const InnerGenerator = (map, posX, posY, width, height) => {
     if(CountSquareNeighbors(map, posX, posY, width, height) > 1) return map
-    map[posX][posY] = 0
+    map[posX][posY] = spaceIndexing.walkable
 
     const nextMoves = Shuffle([
         {

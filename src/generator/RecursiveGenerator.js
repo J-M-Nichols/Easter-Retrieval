@@ -1,13 +1,20 @@
 import InnerGenerator from "./InnerGenerator"
+import spaceIndexing from '../helpers/spaceIndexing'
 
 /**
- * 
+ * Recursivelly generates a multidimensional integer array.
+ * 0 : Empty grass tile
+ * 1 : Impassable obstacle
+ * 2 : Hen-chman
+ * 3 : Victory egg
  * 
  * @param {int} width 
  * @param {int} height 
+ * @param {int} henchmanCount 
+ * @param {int} eggCount
  */
 const RecursiveGenerator = (width, height, henchmenCount, eggCount) => {
-    let map = [...Array(height+2)].map(_=>[...Array(width+2)].map(_=>1))
+    let map = [...Array(height+2)].map(_=>[...Array(width+2)].map(_=>spaceIndexing.obstacle))
 
     map = InnerGenerator(map, 1, 1, width, height)
 
@@ -30,7 +37,7 @@ const RecursiveGenerator = (width, height, henchmenCount, eggCount) => {
         const eggIndex = Math.floor(Math.random() * possibleEggLocations.length)
         const {x, y} = possibleEggLocations.splice(eggIndex, 1)[0]
 
-        finalMap[y][x] = 3
+        finalMap[y][x] = spaceIndexing.egg
     }
 
     //place {henchmenCount} henchman where finalMap[y][x] === 1 - 2
@@ -38,7 +45,7 @@ const RecursiveGenerator = (width, height, henchmenCount, eggCount) => {
         const henchmanIndex = Math.floor(Math.random() * possibleHenchmanLocations.length)
         const {x,y} = possibleHenchmanLocations.splice(henchmanIndex, 1)[0]
 
-        finalMap[y][x] = 2
+        finalMap[y][x] = spaceIndexing.henchman
     }
 
     return finalMap
