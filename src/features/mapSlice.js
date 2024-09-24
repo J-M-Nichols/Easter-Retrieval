@@ -10,9 +10,8 @@ const mapSlice = createSlice({
     name:'map',
     initialState,
     reducers:{
-        generateMap: (state, {payload}) => {
-            const {width, height, henchmanCount, eggCount} = payload
-            state.map = RecursiveGenerator(width, height, henchmanCount, eggCount)
+        setMap: (state, {payload}) => {
+            state.map = payload
         },
         resetMark: (state, {payload}) => {
             const {x, y} = payload
@@ -32,5 +31,5 @@ const mapSlice = createSlice({
     }
 })
 
-export const {generateMap, resetMark} = mapSlice.actions
+export const {setMap, resetMark} = mapSlice.actions
 export default mapSlice.reducer

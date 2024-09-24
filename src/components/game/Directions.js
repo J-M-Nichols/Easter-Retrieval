@@ -6,23 +6,29 @@ const Directions = ()=>{
     const dispatch = useDispatch()
 
     useEffect(()=>{
-        const handleKeyDown = ({key}) => {
+        const handleKeyDown = event => {
+            const {key} = event
+
             switch (key){
                 case 'ArrowUp':
                 case 'w':
                     moveUp()
+                    event.preventDefault()
                     break
                 case 'ArrowDown':
                 case 's':
                     moveDown()
+                    event.preventDefault()
                     break
                 case 'ArrowLeft':
                 case 'a':
                     moveLeft()
+                    event.preventDefault()
                     break
                 case 'ArrowRight':
                 case 'd':
                     moveRight()
+                    event.preventDefault()
                     break
             }
         }
@@ -51,7 +57,7 @@ const Directions = ()=>{
     return (
         <section
             aria-label="direction"
-            className="border rounded p-3 m-auto"
+            className="p-3 m-auto"
         >
             <div
                 className="d-flex justify-content-center"

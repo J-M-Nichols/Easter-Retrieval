@@ -32,12 +32,14 @@ const RecursiveGenerator = (width, height, henchmenCount, eggCount) => {
         }
     }
 
+    let eggsPlaced = 0;
     //place egg in row 9 - 3
     for(let i = 0; i < eggCount && possibleEggLocations.length > 0; i++){
         const eggIndex = Math.floor(Math.random() * possibleEggLocations.length)
         const {x, y} = possibleEggLocations.splice(eggIndex, 1)[0]
 
         finalMap[y][x] = spaceIndexing.egg
+        eggsPlaced++
     }
 
     //place {henchmenCount} henchman where finalMap[y][x] === 1 - 2
@@ -48,7 +50,7 @@ const RecursiveGenerator = (width, height, henchmenCount, eggCount) => {
         finalMap[y][x] = spaceIndexing.henchman
     }
 
-    return finalMap
+    return {map:finalMap, eggsPlaced:eggsPlaced}
 }
 
 export default RecursiveGenerator

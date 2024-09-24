@@ -1,7 +1,6 @@
 import AnimatedSprite from "./animatedSprite/AnimatedSprite"
-import ChesterCarrots from '../images/ChesterCarrots.png'
+import ChesterCarrots from '../../images/ChesterCarrots.png'
 import { useSelector } from "react-redux"
-import { useEffect } from "react"
 
 const PlayerSprite = () => {
     const {direction, x, y} = useSelector(state=>state.position)

@@ -10,12 +10,9 @@ const levelSlice = createSlice({
     reducers:{
         setLevel: (state, {payload})=>{
             state.level = payload
-        },
-        increaseLevel: state => {
-            state.level += 1
         }
     }
 })
 
-export const {setLevel, increaseLevel} = levelSlice.actions
+export const {setLevel} = levelSlice.actions
 export default levelSlice.reducer

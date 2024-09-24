@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import AnimatedSprite from "../../animatedSprite/AnimatedSprite"
+import AnimatedSprite from "../animatedSprite/AnimatedSprite"
 import GameElement from "./GameElement"
 import { useDispatch, useSelector } from "react-redux"
 import generateGameElements from "../../../helpers/generateGameElements"

@@ -1,9 +1,19 @@
-import { useSelector } from "react-redux"
+import { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { nextLevel } from "../../features/gameSlice"
 
 const InfoDisplay = _ => {
     const {currentHealth} = useSelector(state=>state.health)
     const {score} = useSelector(state=>state.score)
     const {eggCount} = useSelector(state=>state.eggs)
+    const {map} = useSelector(state=>state.map)
+    const dispatch = useDispatch()
+
+    useEffect(()=>{
+        if(eggCount===0 && map.length > 0){
+            dispatch(nextLevel())
+        }
+    },[eggCount, map])
 
     return (
         <ul
