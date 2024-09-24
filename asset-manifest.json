@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Easter-Retrieval/static/css/main.09071836.css",
+    "main.js": "/Easter-Retrieval/static/js/main.3742b0ef.js",
+    "index.html": "/Easter-Retrieval/index.html",
+    "main.09071836.css.map": "/Easter-Retrieval/static/css/main.09071836.css.map",
+    "main.3742b0ef.js.map": "/Easter-Retrieval/static/js/main.3742b0ef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.09071836.css",
+    "static/js/main.3742b0ef.js"
+  ]
+}
