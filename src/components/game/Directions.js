@@ -68,7 +68,7 @@ const Directions = ()=>{
                     className="btn btn-outline-info p-4 lh-1"
                     aria-label="Move Up"
                     onClick={moveUp}
-                >&#11165;</button>
+                ><i class="bi bi-caret-up-fill"></i></button>
             </div>
             <div 
                 className="d-flex gap-3 justify-content-center"
@@ -78,19 +78,19 @@ const Directions = ()=>{
                     className="btn btn-outline-info p-4 lh-1"
                     aria-label="Move Left"
                     onClick={moveLeft}
-                >&#11164;</button>
+                ><i class="bi bi-caret-left-fill"></i></button>
                 <button 
                     type="button"
                     className="btn btn-outline-info p-4 lh-1"
                     aria-label="Move Down"
                     onClick={moveDown}
-                >&#11167;</button>
+                ><i class="bi bi-caret-down-fill"></i></button>
                 <button 
                     type="button"
                     className="btn btn-outline-info p-4 lh-1"
                     aria-label="Move Right"
                     onClick={moveRight}
-                >&#11166;</button>
+                ><i class="bi bi-caret-right-fill"></i></button>
             </div>
         </section>
     )
