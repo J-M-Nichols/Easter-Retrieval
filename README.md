@@ -3,6 +3,9 @@ Play as the egg-ceptional Chester Carrots in his hunt for eggs. The evil chicken
 
 *Can you find them all while avoiding his army of Hen-chman?*
 
+## Play Now
+[Play Now](https://j-m-nichols.github.io/Easter-Retrieval/)
+
 ## Goal
 The goal of the game is to collect all of the eggs on the map.
 
