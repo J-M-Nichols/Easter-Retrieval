@@ -13,7 +13,7 @@ const InfoDisplay = _ => {
         if(eggCount===0 && map.length > 0){
             dispatch(nextLevel())
         }
-    },[eggCount, map])
+    },[eggCount, map, dispatch])
 
     return (
         <ul

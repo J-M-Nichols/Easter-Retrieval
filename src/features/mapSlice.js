@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit"
-import RecursiveGenerator from "../generator/RecursiveGenerator"
 import spaceIndexing from "../helpers/spaceIndexing"
 
 const initialState = {

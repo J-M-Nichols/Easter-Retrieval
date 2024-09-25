@@ -12,31 +12,32 @@ const Directions = ()=>{
             switch (key){
                 case 'ArrowUp':
                 case 'w':
-                    moveUp()
+                    dispatch(moveY(-1))
                     event.preventDefault()
                     break
                 case 'ArrowDown':
                 case 's':
-                    moveDown()
+                    dispatch(moveY(1))
                     event.preventDefault()
                     break
                 case 'ArrowLeft':
                 case 'a':
-                    moveLeft()
+                    dispatch(moveX(-1))
                     event.preventDefault()
                     break
                 case 'ArrowRight':
                 case 'd':
-                    moveRight()
+                    dispatch(moveX(1))
                     event.preventDefault()
                     break
+                default: break
             }
         }
 
         window.addEventListener('keydown', handleKeyDown)
 
         return () => window.removeEventListener('keydown', handleKeyDown)
-    },[])
+    },[dispatch])
 
     const moveUp = _ => {
         dispatch(moveY(-1))
@@ -57,36 +58,36 @@ const Directions = ()=>{
     return (
         <section
             aria-label="direction"
-            className="p-3 m-auto"
+            className="p-3 m-auto d-flex gap-3 flex-column"
         >
             <div
                 className="d-flex justify-content-center"
             >
                 <button 
                     type="button"
-                    className="btn btn-outline-primary"
+                    className="btn btn-outline-info p-4 lh-1"
                     aria-label="Move Up"
                     onClick={moveUp}
                 >&#11165;</button>
             </div>
             <div 
-                className="d-flex justify-content-center"
+                className="d-flex gap-3 justify-content-center"
             >
                 <button 
                     type="button"
-                    className="btn btn-outline-primary"
+                    className="btn btn-outline-info p-4 lh-1"
                     aria-label="Move Left"
                     onClick={moveLeft}
                 >&#11164;</button>
                 <button 
                     type="button"
-                    className="btn btn-outline-primary"
+                    className="btn btn-outline-info p-4 lh-1"
                     aria-label="Move Down"
                     onClick={moveDown}
                 >&#11167;</button>
                 <button 
                     type="button"
-                    className="btn btn-outline-primary"
+                    className="btn btn-outline-info p-4 lh-1"
                     aria-label="Move Right"
                     onClick={moveRight}
                 >&#11166;</button>

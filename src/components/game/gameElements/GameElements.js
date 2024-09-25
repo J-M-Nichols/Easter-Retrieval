@@ -13,7 +13,7 @@ const GameElements = () => {
     useEffect(()=>{
         if(map.length === 0) dispatch(initializeGame())
         else setGameElements(generateGameElements(map))
-    },[map])
+    },[map, dispatch])
 
     return (
         <section 
