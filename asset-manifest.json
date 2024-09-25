@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/Easter-Retrieval/static/css/main.09071836.css",
-    "main.js": "/Easter-Retrieval/static/js/main.aa61942c.js",
+    "main.css": "/Easter-Retrieval/static/css/main.b5427d29.css",
+    "main.js": "/Easter-Retrieval/static/js/main.f86e04ef.js",
+    "static/media/bootstrap-icons.woff?": "/Easter-Retrieval/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/Easter-Retrieval/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
     "index.html": "/Easter-Retrieval/index.html",
-    "main.09071836.css.map": "/Easter-Retrieval/static/css/main.09071836.css.map",
-    "main.aa61942c.js.map": "/Easter-Retrieval/static/js/main.aa61942c.js.map"
+    "main.b5427d29.css.map": "/Easter-Retrieval/static/css/main.b5427d29.css.map",
+    "main.f86e04ef.js.map": "/Easter-Retrieval/static/js/main.f86e04ef.js.map"
   },
   "entrypoints": [
-    "static/css/main.09071836.css",
-    "static/js/main.aa61942c.js"
+    "static/css/main.b5427d29.css",
+    "static/js/main.f86e04ef.js"
   ]
 }
