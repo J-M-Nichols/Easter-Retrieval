@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-    score: 0
+    score: Number(localStorage.getItem('score')) || 0
 }
 
 const scoreSlice = createSlice({
@@ -9,13 +9,12 @@ const scoreSlice = createSlice({
     initialState,
     reducers:{
         addScore:(state, {payload})=>{
-            state.score += payload
-        },
-        resetScore: state => {
-            state.score = 0
+            const score = state.score + payload
+            localStorage.setItem('score', score)
+            state.score = score
         }
     }
 })
 
-export const {addScore, resetScore} = scoreSlice.actions
+export const {addScore} = scoreSlice.actions
 export default scoreSlice.reducer

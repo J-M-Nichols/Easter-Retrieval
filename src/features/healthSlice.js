@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
     maxHealth: 3,
-    currentHealth: 3,
+    currentHealth: Number(localStorage.getItem('health')) || 3,
 }
 
 const healthSlice = createSlice({
@@ -10,13 +10,12 @@ const healthSlice = createSlice({
     initialState,
     reducers:{
         changeHealth: (state, {payload}) => {
-            state.currentHealth += payload 
-        },
-        resetHealth: state => {
-            state.currentHealth = state.maxHealth
+            const health = state.currentHealth + payload
+            localStorage.setItem('health', health)
+            state.currentHealth = health
         }
     }
 })
 
-export const {changeHealth, resetHealth} = healthSlice.actions
+export const {changeHealth} = healthSlice.actions
 export default healthSlice.reducer

@@ -1,4 +1,12 @@
 const GameOver = _ => {
+    const resetGame = _ => {
+        localStorage.removeItem('level')
+        localStorage.removeItem('health')
+        localStorage.removeItem('score')
+        
+        window.location.reload()
+    }
+
     return (
         <section
             className="d-flex flex-column gap-3 user-select-none"
@@ -20,7 +28,7 @@ const GameOver = _ => {
                 }}
             />
             <button
-                onClick={()=>window.location.reload()}
+                onClick={resetGame}
                 className='m-auto fs-1 btn btn-outline-info'
             >Retry</button>
         </section>

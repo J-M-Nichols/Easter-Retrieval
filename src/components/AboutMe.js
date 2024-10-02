@@ -1,5 +1,5 @@
 import React from "react"
-import { Col, Container, OverlayTrigger, Row, Tooltip } from "react-bootstrap"
+import { OverlayTrigger, Tooltip } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
 const AboutMe = () => {
