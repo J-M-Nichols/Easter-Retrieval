@@ -1,8 +1,11 @@
+import { GitHubStorageHandlers } from "github-localstorage-handler"
+import trackedPaths from "../../helpers/trackedPaths"
+
 const GameOver = _ => {
+    const gameHandlers = new GitHubStorageHandlers(...Object.keys(trackedPaths))
+
     const resetGame = _ => {
-        localStorage.removeItem('level')
-        localStorage.removeItem('health')
-        localStorage.removeItem('score')
+        gameHandlers.clearAllPaths()
         
         window.location.reload()
     }

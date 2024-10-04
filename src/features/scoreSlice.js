@@ -1,7 +1,10 @@
+import { GitHubStorageHandler } from "github-localstorage-handler"
 import { createSlice } from "@reduxjs/toolkit"
 
+const handler = new GitHubStorageHandler('score')
+
 const initialState = {
-    score: Number(localStorage.getItem('score')) || 0
+    score: handler.getNumber(0)
 }
 
 const scoreSlice = createSlice({
@@ -10,7 +13,7 @@ const scoreSlice = createSlice({
     reducers:{
         addScore:(state, {payload})=>{
             const score = state.score + payload
-            localStorage.setItem('score', score)
+            handler.setItem(score)
             state.score = score
         }
     }

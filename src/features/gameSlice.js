@@ -6,6 +6,9 @@ import { setDimensions } from "./dimensionsSlice";
 import { setMap } from "./mapSlice";
 import { setPosition } from "./positionSlice/positionSlice";
 import RecursiveGenerator from "../generator/RecursiveGenerator";
+import { GitHubStorageHandler } from "github-localstorage-handler";
+
+const levelHandler = new GitHubStorageHandler('level')
 
 const loadGame = (dispatch, level) => {
     dispatch(setLevel(level))
@@ -34,7 +37,7 @@ const loadGame = (dispatch, level) => {
 export const initializeGame = createAsyncThunk(
     'level/startGame',
     async (_, {dispatch}) => {
-        const level = Number(localStorage.getItem('level')) || 1
+        const level = levelHandler.getNumber(1)
         
         loadGame(dispatch, level)
     }
@@ -48,7 +51,7 @@ export const nextLevel = createAsyncThunk(
 
         const newLevel = level+1
 
-        localStorage.setItem('level', newLevel)
+        levelHandler.setItem(newLevel)
 
         loadGame(dispatch, newLevel)
     }
