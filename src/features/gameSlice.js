@@ -7,7 +7,7 @@ import { setMap } from "./mapSlice";
 import { setPosition } from "./positionSlice/positionSlice";
 import RecursiveGenerator from "../generator/RecursiveGenerator";
 import { GitHubStorageHandler } from "github-localstorage-handler";
-import trackedPaths from "../helpers/trackedpaths";
+import trackedPaths from "../helpers/trackedPaths";
 
 const levelHandler = new GitHubStorageHandler(trackedPaths.level)
 
@@ -52,7 +52,7 @@ export const nextLevel = createAsyncThunk(
 
         const newLevel = level+1
 
-        levelHandler.setItem(newLevel)
+        levelHandler.setNumber(newLevel)
 
         loadGame(dispatch, newLevel)
     }

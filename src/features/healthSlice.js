@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 import { GitHubStorageHandler } from "github-localstorage-handler"
-import trackedPaths from "../helpers/trackedpaths"
+import trackedPaths from "../helpers/trackedPaths"
 
 const healthHandler = new GitHubStorageHandler(trackedPaths.health)
 
@@ -15,7 +15,7 @@ const healthSlice = createSlice({
     reducers:{
         changeHealth: (state, {payload}) => {
             const health = state.currentHealth + payload
-            healthHandler.setItem(health)
+            healthHandler.setNumber(health)
             state.currentHealth = health
         }
     }
