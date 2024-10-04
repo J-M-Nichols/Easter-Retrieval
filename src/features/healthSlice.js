@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit"
 import { GitHubStorageHandler } from "github-localstorage-handler"
+import trackedPaths from "../helpers/trackedpaths"
 
-const healthHandler = new GitHubStorageHandler('health')
+const healthHandler = new GitHubStorageHandler(trackedPaths.health)
 
 const initialState = {
     maxHealth: 3,

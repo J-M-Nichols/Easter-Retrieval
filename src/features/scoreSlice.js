@@ -1,7 +1,8 @@
 import { GitHubStorageHandler } from "github-localstorage-handler"
 import { createSlice } from "@reduxjs/toolkit"
+import trackedPaths from "../helpers/trackedpaths"
 
-const handler = new GitHubStorageHandler('score')
+const handler = new GitHubStorageHandler(trackedPaths.score)
 
 const initialState = {
     score: handler.getNumber(0)

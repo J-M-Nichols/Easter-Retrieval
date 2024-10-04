@@ -7,8 +7,9 @@ import { setMap } from "./mapSlice";
 import { setPosition } from "./positionSlice/positionSlice";
 import RecursiveGenerator from "../generator/RecursiveGenerator";
 import { GitHubStorageHandler } from "github-localstorage-handler";
+import trackedPaths from "../helpers/trackedpaths";
 
-const levelHandler = new GitHubStorageHandler('level')
+const levelHandler = new GitHubStorageHandler(trackedPaths.level)
 
 const loadGame = (dispatch, level) => {
     dispatch(setLevel(level))
